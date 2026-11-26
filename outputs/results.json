@@ -1,0 +1,65 @@
+{
+  "student": "Bhaumik Senwal",
+  "roll_number": "2301730328",
+  "dataset": {
+    "rows": 12000,
+    "train_rows": 9000,
+    "test_rows": 3000,
+    "source": "synthetic",
+    "random_seed": 42
+  },
+  "supervised_models": {
+    "random_forest": {
+      "accuracy": 0.9977,
+      "macro_f1": 0.994
+    },
+    "mlp": {
+      "accuracy": 0.997,
+      "macro_f1": 0.9933
+    }
+  },
+  "isolation_forest_roc_auc": {
+    "brute_force": 0.9975,
+    "c2_beacon": 0.9623,
+    "data_exfil": 0.9997,
+    "ddos": 0.9997,
+    "port_scan": 0.9977
+  },
+  "evasion": {
+    "epsilon": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "baseline_attack_recall": [
+      0.993,
+      0.983,
+      0.94,
+      0.605
+    ],
+    "augmented_attack_recall": [
+      0.994,
+      0.994,
+      0.994,
+      0.989
+    ]
+  },
+  "adversarial_model": {
+    "clean_macro_f1": 0.9949,
+    "clean_false_positive_rate": 0
+  },
+  "baseline_clean_false_positive_rate": 0,
+  "fairness_diagnostic": {
+    "working_hours": {
+      "normal_flows": 1721,
+      "false_positive_rate": 0
+    },
+    "off_hours": {
+      "normal_flows": 279,
+      "false_positive_rate": 0
+    },
+    "note": "Synthetic subgroup diagnostic only; not evidence of fairness on real network data."
+  },
+  "caveat": "Metrics are specific to a synthetic experiment and are not production performance claims."
+}
