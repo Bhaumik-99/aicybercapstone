@@ -48,7 +48,7 @@ python -m venv .venv
 # macOS/Linux: source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-jupyter notebook threat_detection_capstone.ipynb
+# Open the notebook from the submission ZIP after extracting it
 ```
 
 Run all notebook cells from top to bottom. A fixed random seed (42) makes the synthetic dataset and split reproducible. Figures and a refreshed `outputs/results.json` are written during execution.
